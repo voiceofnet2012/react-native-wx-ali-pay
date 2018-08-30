@@ -43,6 +43,7 @@ RCT_EXPORT_METHOD(onAliPay:(NSDictionary *)orderString  resolver:(RCTPromiseReso
             }else{//处理失败
                 reject(resultStatus,@"支付失败",nil);
             }
+            [[NSNotificationCenter defaultCenter] removeObserver:self name:@"aliPayReslut" object:nil];
         }];
     }
 }
@@ -77,6 +78,7 @@ RCT_EXPORT_METHOD(onWxPay:(NSDictionary *)info resolver:(RCTPromiseResolveBlock)
     }else{//处理失败
         _rejectBlock(resultStatus,@"支付失败",nil);
     }
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"aliPayReslut" object:nil];
 }
 
 @end
