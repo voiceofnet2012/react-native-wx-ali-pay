@@ -3,6 +3,7 @@ package com.timson.react_native_wx_ali_pay;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.tencent.mm.sdk.modelpay.PayReq;
 import com.timson.react_native_wx_ali_pay.alipay.AliPay;
 import com.timson.react_native_wx_ali_pay.wxpay.WXPay;
 
@@ -12,7 +13,6 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
 
-import com.tencent.mm.opensdk.modelpay.PayReq;
 
 
 /**
